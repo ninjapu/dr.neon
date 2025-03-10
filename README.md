@@ -1,19 +1,48 @@
-DCN Important Commands:
+### DCN Important Commands:
 
-ls- list of all files
-pwd - Current Location
-mkdir - make Directory
-rmdir - remove Directory
-cd - change Directory
-touch - empty file creation
-cat - read file content
-nano filename - to write in file
-Ctrl + x - to go back after changing file content then press Y. to save our practical
-rm filename - to remove files
-cp filename - to copy file
-mv filename then path name  - move directory 
-sudo - admin permissions
-ctrl + shift + v - to paste our code in file
+- **List all files**  
+  `ls`
 
-To Run Our Practical Files : 
-gcc filename.c -o filename 
+- **Show current location (directory)**  
+  `pwd`
+
+- **Create a new directory**  
+  `mkdir directory_name`
+
+- **Remove a directory**  
+  `rmdir directory_name`
+
+- **Change directory**  
+  `cd directory_path`
+
+- **Create an empty file**  
+  `touch filename`
+
+- **Read file content**  
+  `cat filename`
+
+- **Write to a file using nano editor**  
+  `nano filename`
+
+- **Exit nano and save changes**  
+  *Press `Ctrl + X` to exit, then press `Y` to confirm saving.*
+
+- **Remove a file**  
+  `rm filename`
+
+- **Copy a file**  
+  `cp filename destination_path`
+
+- **Move a file or directory**  
+  `mv filename destination_path`
+
+- **Grant admin permissions (run command as superuser)**  
+  `sudo command_name`
+
+- **Paste code into a file (in terminal)**  
+  *Press `Ctrl + Shift + V` to paste.*
+
+### To Run Practical Files:
+
+- **Compile C program**  
+  `gcc filename.c -o filename`
