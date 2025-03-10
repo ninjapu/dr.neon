@@ -1,0 +1,91 @@
+DCN Important Commands:
+List all files
+ls
+
+Display current location
+pwd
+
+Create a new directory
+mkdir directory_name
+
+Remove a directory
+rmdir directory_name
+
+Change directory
+cd directory_name
+
+Create an empty file
+touch filename
+
+Read file content
+cat filename
+
+Open a file for editing
+nano filename
+(To save changes, press Ctrl + X, then Y to confirm)
+
+Remove a file
+rm filename
+
+Copy a file
+cp source_filename destination_filename
+
+Move a file or directory
+mv filename destination_path
+
+Execute command with admin permissions
+sudo command
+
+Paste code in the terminal
+Ctrl + Shift + V
+
+To Run Our Practical Files:
+Compile a C program
+gcc filename.c -o output_filename
+
+run
+./filename
+
+
+
+
+
+  #include <stdio.h>
+  #include <string.h>
+  
+  #define MAX_MESSAGE_LENGTH 1000
+  
+  void generateFrames(char *message, int frameLength)
+  {
+      int messageLength = strlen(message);
+      int numFrames = (messageLength + frameLength - 1) / frameLength; // Calculate the number of frames needed
+      int i, j;
+      printf("Frames:\n");
+  
+      for (i = 0; i < numFrames; i++)
+      {
+          printf("Frame %d: ", i + 1);
+          for (j = 0; j < frameLength && (i * frameLength + j) < messageLength; j++)
+          {
+              printf("%c", message[i * frameLength + j]);
+          }
+          printf("\n");
+      }
+  }
+  int main()
+  {
+      char message[MAX_MESSAGE_LENGTH];
+      int frameLength;
+  
+      printf("Enter the message: ");
+      fgets(message, sizeof(message), stdin);
+  
+      message[strcspn(message, "\n")] = '\0'; // Remove trailing newline
+  
+      printf("Enter the frame length: ");
+      scanf("%d", &frameLength);
+  
+      generateFrames(message, frameLength);
+  
+      return 0;
+  }
